@@ -19,7 +19,7 @@ cpus = '4'
 memory = '10240'
 
 # Update version to pull a specific version i.e. version = '2.1.0-beta-1'
-version = "2.1.0.1"
+version = "2.1.0.2"
 
 # host-only network segment - in most cases you do not have to change this value
 # on some systems this network segment may overlap another network already on your
@@ -28,17 +28,17 @@ version = "2.1.0.1"
 base_segment = '192.168.27'
 
 # enable/disable cluster federation
-federation_enabled = 'true'
+federation_enabled = 'false'
 
 # enable the metering service
 # only used if version < 2.1.0-beta-3 see disabled_management_services below
-metering_enabled = 'true'
+metering_enabled = 'false'
 
 # disabled mgmt services list
 # "va" turns off vulnerability advisor
 # "metering" turns off prometheus and grafana metering
 # "monitoring"  turns off monitoring services
-disabled_management_services = '["va"]'
+disabled_management_services = '["va", "metering", "monitoring"]'
 
 # use apt-cacher-ng & docker registry cache servers
 # see instructions in the `README.md` under #Advanced Cache Setup
@@ -47,8 +47,8 @@ cache_host = '192.168.27.99'
 apt_cache_port = '3142'
 docker_registry_port = '5000'
 helm_version = '2.6.0'
-k8s_version = '1.8.3'
-etcd_version = '3.1.5'
+k8s_version = '1.9.1'
+etcd_version = '3.2.14'
 
 ###############################################################################
 #                  DO NOT MODIFY ANYTHING BELOW THIS POINT                    #
